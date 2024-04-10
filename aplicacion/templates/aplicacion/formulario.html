@@ -1,0 +1,1603 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% load static %}
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link   
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="{% static 'assets/images/favicon-32x32.png' %}"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Frontend Mentor | Multi-step form</title>
+    <link rel="stylesheet" href="{% static '/css/formulario.css' %}" />
+    <script src="{% static '/js/formulario.js' %}" defer></script>
+  </head>
+  <body>
+    <div class="form">
+      <div class="form-container">
+        <div class="columna-iz">
+            <img class="lg-formulario" src="{% static '/assets/images/logo.png' %}" alt="">
+            <!-- Sidebar start -->
+            <div class="form-sidebar">
+            <div class="step active">
+                <div class="circle">1</div>
+                <div class="step-content">
+                <span>Paso</span>
+                </div>
+            </div>
+            <div class="step">
+                <div class="circle">2</div>
+                <div class="step-content">
+                <span>Paso</span>
+                </div>
+            </div>
+            <div class="step">
+                <div class="circle">3</div>
+                <div class="step-content">
+                <span>Paso</span>
+                </div>
+            </div>
+            <div class="step">
+                <div class="circle">4</div>
+                <div class="step-content">
+                <span>Paso</span>
+                </div>
+            </div>
+            </div>
+        </div>
+        <!-- Sidebar end -->
+        <!-- * Step 1 start -->
+        <div class="stp step-1">
+          <div class="header">
+            <h1 class="title">Visita a Centro Educativo MEDUCA</h1>
+            <p class="exp">
+              Proporcione su nombre completo y dirección de correo electrónico.
+            </p>
+          </div>
+          <form>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <div class="label">
+                        <label for="name">Nombre</label>
+                        <p class="error">Este campo es obligatorio</p>
+                    </div>
+                    <input
+                        required
+                        type="text"
+                        id="name"
+                        placeholder="Tu nombre completo"
+                    />
+                    <div class="label">
+                        <label for="email">Correo electrónico</label>
+                        <p class="error">Este campo es obligatorio</p>
+                    </div>
+                    <input
+                        required
+                        type="email"
+                        id="email"
+                        placeholder="correoelectronico@gmail.com"
+                    />
+                    <div class="label">
+                        <label for="name-centro-educ">Nombre de Centro Educativo</label>
+                        <p class="error">Este campo es obligatorio</p>
+                    </div>
+                    <input
+                        required
+                        type="text"
+                        id="name-centro-educ"
+                        placeholder="Nombre de Centro Educativo"
+                    />
+                    <div class="label">
+                        <label for="phone">No. de SIACE</label>
+                        <p class="error">Inserte el código del colegio</p>
+                    </div>
+                    <input
+                        required
+                        type="number"
+                        id="phone"
+                        placeholder="Código del colegio"
+                    />
+                    <div class="label">
+                        <label for="name-provincia">Provincia</label>
+                        <p class="error">Este campo es obligatorio</p>
+                      </div>
+                      <input
+                        required
+                        type="text"
+                        id="name-provincia"
+                        placeholder="Tu Provincia"
+                      />
+                      <div class="label">
+                        <label for="name-direccion">Direccion</label>
+                        <p class="error">Este campo es obligatorio</p>
+                      </div>
+                      <input
+                        required
+                        type="text"
+                        id="name-direccion"
+                        placeholder="Tu dirección"
+                      />
+                      <div class="label">
+                        <label for="geolocalizacion">Geolocalizacion</label>
+                        <p class="error">Este campo es obligatorio</p>
+                      </div>
+                      <input
+                        required
+                        type="text"
+                        id="geolocalizacion"
+                        placeholder="Tu geolocalización"
+                      />
+                      <div class="label">
+                        <label for="nivel-escolar">Nivel escolar ofrecido</label>
+                        <p class="error">Este campo es obligatorio</p>
+                      </div>
+                      <input
+                        required
+                        type="text"
+                        id="nivel-escolar"
+                        placeholder="Tu nivel escolar"
+                      />
+                      <div class="label">
+                        <label for="matricula-estud">Matricula total de estudiantes</label>
+                        <p class="error">Este campo es obligatorio</p>
+                      </div>
+                      <input
+                        required
+                        type="number"
+                        id="matricula-estud"
+                        placeholder="Cantidad"
+                      />
+                </div>
+                <div class="form-group col-md-6">
+                    <div class="label">
+                        <label for="cant-docentes">Cantidad total de docentes</label>
+                        <p class="error">Este campo es obligatorio</p>
+                      </div>
+                      <input
+                        required
+                        type="number"
+                        id="cant-docentes"
+                        placeholder="Cantidad"
+                      />
+                      <!-- Participa Activamente en PPB -->
+                        <div class="label">
+                            <label for="participa-ppb">Participa Activamente en PPB</label>
+                            <p class="error">Este campo es obligatorio</p>
+                        </div>
+                        <input
+                            required
+                            type="text"
+                            id="participa-ppb"
+                            placeholder="Indique sí o no"
+                        />
+        
+                        <!-- Estudiantes por nivel en PPB -->
+                        <div class="label">
+                            <label for="estudiantes-nivel-ppb">Estudiantes por nivel en PPB</label>
+                            <p class="error">Este campo es obligatorio</p>
+                        </div>
+                        <input
+                            required
+                            type="number"
+                            id="estudiantes-nivel-ppb"
+                            placeholder="Número de estudiantes"
+                        />
+        
+                        <!-- Cantidad de Docentes Capacitados localmente en el PPB por grado -->
+                        <div class="label">
+                            <label for="docentes-capacitados-ppb">Cantidad de Docentes Capacitados localmente en el PPB por grado</label>
+                            <p class="error">Este campo es obligatorio</p>
+                        </div>
+                        <input
+                            required
+                            type="number"
+                            id="docentes-capacitados-ppb"
+                            placeholder="Número de docentes capacitados por grado"
+                        />
+        
+                        <!-- Cantidad de Docentes capacitados localmente que aprobaron el exámen por grado -->
+                        <div class="label">
+                            <label for="docentes-aprobados">Cantidad de Docentes capacitados localmente que aprobaron el examen por grado</label>
+                            <p class="error">Este campo es obligatorio</p>
+                        </div>
+                        <input
+                            required
+                            type="number"
+                            id="docentes-aprobados"
+                            placeholder="Número de docentes que aprobaron por grado"
+                        />
+        
+                        <!-- Datos especificos de actores clave: Director y docente -->
+        
+                            <!-- Nombre del director -->
+                            <div class="label">
+                                <label for="nombre-director">Nombre del director</label>
+                                <p class="error">Este campo es obligatorio</p>
+                            </div>
+                            <input
+                                required
+                                type="text"
+                                id="nombre-director"
+                                placeholder="Nombre del director"
+                            />
+        
+                            <!-- Apellido del director -->
+                            <div class="label">
+                                <label for="apellido-director">Apellido del director</label>
+                                <p class="error">Este campo es obligatorio</p>
+                            </div>
+                            <input
+                                required
+                                type="text"
+                                id="apellido-director"
+                                placeholder="Apellido del director"
+                            />
+        
+                            <!-- Cédula del director -->
+                            <div class="label">
+                                <label for="cedula-director">Cédula del director</label>
+                                <p class="error">Este campo es obligatorio</p>
+                            </div>
+                            <input
+                                required
+                                type="text"
+                                id="cedula-director"
+                                placeholder="Cédula del director"
+                            />
+        
+                            <!-- Teléfono oficina del director -->
+                            <div class="label">
+                                <label for="telefono-oficina-director">Teléfono oficina del director</label>
+                                <p class="error">Este campo es obligatorio</p>
+                            </div>
+                            <input
+                                required
+                                type="tel"
+                                id="telefono-oficina-director"
+                                placeholder="Teléfono de la oficina del director"
+                            />
+                </div>
+                <div class="form-group col-md-6">
+                    <!-- Teléfono personal del director -->
+                    <div class="label">
+                        <label for="telefono-personal-director">Teléfono personal del director</label>
+                        <p class="error">Este campo es obligatorio</p>
+                    </div>
+                    <input
+                        required
+                        type="tel"
+                        id="telefono-personal-director"
+                        placeholder="Teléfono personal del director"
+                    />
+
+                    <!-- Correo institucional del director -->
+                    <div class="label">
+                        <label for="correo-institucional-director">Correo institucional del director</label>
+                        <p class="error">Este campo es obligatorio</p>
+                    </div>
+                    <input
+                        required
+                        type="email"
+                        id="correo-institucional-director"
+                        placeholder="Correo institucional del director"
+                    />
+
+                    <!-- Correo personal del director -->
+                    <div class="label">
+                        <label for="correo-personal-director">Correo personal del director</label>
+                        <p class="error">Este campo es obligatorio</p>
+                    </div>
+                    <input
+                        required
+                        type="email"
+                        id="correo-personal-director"
+                        placeholder="Correo personal del director"
+                    />
+
+                    <!-- Nombre del docente -->
+                    <div class="label">
+                        <label for="nombre-docente">Nombre del docente</label>
+                        <p class="error">Este campo es obligatorio</p>
+                    </div>
+                    <input
+                        required
+                        type="text"
+                        id="nombre-docente"
+                        placeholder="Nombre del docente"
+                    />
+
+                    <!-- Apellido del docente -->
+                    <div class="label">
+                        <label for="apellido-docente">Apellido del docente</label>
+                        <p class="error">Este campo es obligatorio</p>
+                    </div>
+                    <input
+                        required
+                        type="text"
+                        id="apellido-docente"
+                        placeholder="Apellido del docente"
+                    />
+
+                    <!-- Cédula del docente -->
+                    <div class="label">
+                        <label for="cedula-docente">Cédula del docente</label>
+                        <p class="error">Este campo es obligatorio</p>
+                    </div>
+                    <input
+                        required
+                        type="text"
+                        id="cedula-docente"
+                        placeholder="Cédula del docente"
+                    />
+
+                    <!-- Teléfono oficina del docente -->
+                    <div class="label">
+                        <label for="telefono-oficina-docente">Teléfono oficina del docente</label>
+                        <p class="error">Este campo es obligatorio</p>
+                    </div>
+                    <input
+                        required
+                        type="tel"
+                        id="telefono-oficina-docente"
+                        placeholder="Teléfono de la oficina del docente"
+                    />
+
+                    <!-- Teléfono personal del docente -->
+                    <div class="label">
+                        <label for="telefono-personal-docente">Teléfono personal del docente</label>
+                        <p class="error">Este campo es obligatorio</p>
+                    </div>
+                    <input
+                        required
+                        type="tel"
+                        id="telefono-personal-docente"
+                        placeholder="Teléfono personal del docente"
+                    />
+
+                    <!-- Correo institucional del docente -->
+                    <div class="label">
+                        <label for="correo-institucional-docente">Correo institucional del docente</label>
+                        <p class="error">Este campo es obligatorio</p>
+                    </div>
+                    <input
+                        required
+                        type="email"
+                        id="correo-institucional-docente"
+                        placeholder="Correo institucional del docente"
+                    />
+                </div>
+                <div class="form-group col-md-6">
+                    <!-- Fin datos especificos de actores clave: Director y docente -->
+
+                <!-- Dato caracterizacion del centro educativo bilingue -->
+                    <!-- Códigos del plan de estudio (malla curricular) disponibles en el Centro Educativo -->
+                    <div class="label">
+                        <label for="codigo-plan-estudio">Códigos del plan de estudio (malla curricular) disponibles</label>
+                        <p class="error">Este campo es obligatorio</p>
+                    </div>
+                    <input
+                        required
+                        type="text"
+                        id="codigo-plan-estudio"
+                        placeholder="Ingrese los códigos separados por comas"
+                    />
+
+                    <!-- Planes de estudio (malla curricular) disponibles en el Centro Educativo (año 2023) -->
+                    <div class="label">
+                        <label for="planes-estudio-2023">Planes de estudio (malla curricular) disponibles (año 2023)</label>
+                        <p class="error">Este campo es obligatorio</p>
+                    </div>
+                    <textarea
+                        required
+                        id="planes-estudio-2023"
+                        placeholder="Describa los planes de estudio para 2023"
+                    ></textarea>
+
+                    <!-- Planes de clase* según plan de estudios (Contraste entre el Plan de estudio y la planificación/programación del docente) (año 2023) -->
+                    <div class="label">
+                        <label for="planes-clase">Planes de clase según plan de estudios (año 2023)</label>
+                        <p class="error">Este campo es obligatorio</p>
+                    </div>
+                    <textarea
+                        required
+                        id="planes-clase"
+                        placeholder="Detalles del contraste entre el Plan de estudio y la planificación/programación del docente"
+                    ></textarea>
+
+                    <!-- Porcentaje de planes completados en su totalidad al final del año -->
+                    <div class="label">
+                        <label for="porcentaje-planes-completados">Porcentaje de planes completados en su totalidad al final del año</label>
+                        <p class="error">Este campo es obligatorio</p>
+                    </div>
+                    <input
+                        required
+                        type="number"
+                        id="porcentaje-planes-completados"
+                        placeholder="Ingrese el porcentaje de 0 a 100"
+                        min="0"
+                        max="100"
+                    />
+                    <!-- Horas dedicadas a la enseñanza del inglés (basado en el plan de estudios) -->
+                    <div class="label">
+                        <label for="horas-ensenanza-ingles">Horas dedicadas a la enseñanza del inglés (basado en el plan de estudios)</label>
+                        <p class="error">Este campo es obligatorio</p>
+                    </div>
+                    <input
+                        required
+                        type="number"
+                        id="horas-ensenanza-ingles"
+                        placeholder="Cantidad total de horas"
+                    />
+
+                    <!-- Horas teóricas impartidas -->
+                    <div class="label">
+                        <label for="horas-teoricas">Horas teóricas impartidas</label>
+                        <p class="error">Este campo es obligatorio</p>
+                    </div>
+                    <input
+                        required
+                        type="number"
+                        id="horas-teoricas"
+                        placeholder="Cantidad de horas teóricas"
+                    />
+
+                    <!-- Horas prácticas impartidas -->
+                    <div class="label">
+                        <label for="horas-practicas">Horas prácticas impartidas</label>
+                        <p class="error">Este campo es obligatorio</p>
+                    </div>
+                    <input
+                        required
+                        type="number"
+                        id="horas-practicas"
+                        placeholder="Cantidad de horas prácticas"
+                    />
+
+                    <!-- Rango promedio de estudiante por aula -->
+                    <div class="label">
+                        <label for="rango-estudiantes-aula">Rango promedio de estudiante por aula</label>
+                        <p class="error">Este campo es obligatorio</p>
+                    </div>
+                    <input
+                        required
+                        type="text"
+                        id="rango-estudiantes-aula"
+                        placeholder="Ejemplo: 20-30 estudiantes"
+                    />
+
+                    <!-- Para docentes de inglés: ¿Habla inglés con sus estudiantes durante las horas de clase de inglés? -->
+                    <div class="label">
+                        <label for="docente-ingles-habla">Para docentes de inglés: ¿Habla inglés con sus estudiantes durante las horas de clase de inglés?</label>
+                        <p class="error">Este campo es obligatorio</p>
+                    </div>
+                    <select required id="docente-ingles-habla">
+                        <option value="">Seleccione una opción</option>
+                        <option value="siempre">Siempre</option>
+                        <option value="a_veces">A veces</option>
+                        <option value="nunca">Nunca</option>
+                    </select>
+
+                    <!-- Para docentes de otras asignaturas: ¿Habla inglés con sus estudiantes durante las horas de clase de su asignatura? -->
+                    <div class="label">
+                        <label for="docente-otras-habla">Para docentes de otras asignaturas: ¿Habla inglés con sus estudiantes durante las horas de clase de su asignatura?</label>
+                        <p class="error">Este campo es obligatorio</p>
+                    </div>
+                    <select required id="docente-otras-habla">
+                        <option value="">Seleccione una opción</option>
+                        <option value="siempre">Siempre</option>
+                        <option value="a_veces">A veces</option>
+                        <option value="nunca">Nunca</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-6">
+                    <!-- Para docentes de inglés: porcentaje aproximado de tiempo promoviendo el uso del inglés -->
+                    <div class="label">
+                        <label for="porcentaje-ingles-docente">Para docentes de inglés: Indique el porcentaje aproximado de tiempo que promueve el uso del idioma inglés entre estudiantes durante la clase</label>
+                        <p class="error">Este campo es obligatorio</p>
+                    </div>
+                    <input
+                        required
+                        type="number"
+                        id="porcentaje-ingles-docente"
+                        placeholder="Ingrese el porcentaje, ej. 70 para 70%"
+                        min="0"
+                        max="100"
+                    />
+
+                    <!-- Para docentes de otras asignaturas: porcentaje aproximado de tiempo promoviendo el uso del inglés -->
+                    <div class="label">
+                        <label for="porcentaje-ingles-otras-asignaturas">Para docentes de otras asignaturas: Indique el porcentaje aproximado de tiempo que promueve el uso del idioma inglés entre estudiantes durante la clase</label>
+                        <p class="error">Este campo es obligatorio</p>
+                    </div>
+                    <input
+                        required
+                        type="number"
+                        id="porcentaje-ingles-otras-asignaturas"
+                        placeholder="Ingrese el porcentaje, ej. 30 para 30%"
+                        min="0"
+                        max="100"
+                    />
+
+                    <!-- Tiempo promedio de diálogo en inglés con cada estudiante -->
+                    <div class="label">
+                        <label for="tiempo-dialogo-estudiante">¿Cuánto tiempo en promedio dialoga o habla en inglés con cada estudiante?</label>
+                        <p class="error">Este campo es obligatorio</p>
+                    </div>
+                    <input
+                        required
+                        type="text"
+                        id="tiempo-dialogo-estudiante"
+                        placeholder="Ejemplo: 5 minutos por estudiante"
+                    />
+
+                    <!-- Tiempo promedio de uso del idioma inglés durante la clase -->
+                    <div class="label">
+                        <label for="tiempo-uso-ingles-clase">Tiempo promedio de uso del idioma inglés durante la clase</label>
+                        <p class="error">Este campo es obligatorio</p>
+                    </div>
+                    <input
+                        required
+                        type="text"
+                        id="tiempo-uso-ingles-clase"
+                        placeholder="Ejemplo: 20 minutos por clase"
+                    />
+
+                    <!-- Actividades especiales para promover el aprendizaje del inglés -->
+                    <div class="label">
+                        <label for="actividades-ingles">¿Se realizan actividades especiales que promueven el aprendizaje y uso del idioma inglés en su Centro Educativo?</label>
+                        <p class="error">Este campo es obligatorio</p>
+                    </div>
+                    <textarea
+                        required
+                        id="actividades-ingles"
+                        placeholder="Describa las actividades especiales en inglés que se realizan internamente o con otras instituciones, incluyendo los concursos y clubes de inglés."
+                    ></textarea>
+
+                    <!-- Actividades realizadas y planificadas -->
+                    <div class="label">
+                        <label for="actividades-realizadas-planificadas">Actividades realizadas durante el último año (2023) y planificadas para 2024 (nombre y cantidad)</label>
+                        <p class="error">Este campo es obligatorio</p>
+                    </div>
+                    <textarea
+                        required
+                        id="actividades-realizadas-planificadas"
+                        placeholder="Liste las actividades con su nombre y la cantidad de veces que se realizaron o están planificadas."
+                    ></textarea>
+
+                    <!-- Nombres de los organizadores -->
+                    <div class="label">
+                        <label for="organizadores">Mencione el nombre de los organizadores</label>
+                        <p class="error">Este campo es obligatorio</p>
+                    </div>
+                    <input
+                        required
+                        type="text"
+                        id="organizadores"
+                        placeholder="Nombres de los organizadores de las actividades"
+                    />
+
+                    <!-- Cantidad de estudiantes y grados participantes -->
+                    <div class="label">
+                        <label for="estudiantes-participantes">¿Cuántos estudiantes participan actualmente en estas actividades? ¿En qué grados están los estudiantes?</label>
+                        <p class="error">Este campo es obligatorio</p>
+                    </div>
+                    <input
+                        required
+                        type="text"
+                        id="estudiantes-participantes"
+                        placeholder="Ejemplo: 50 estudiantes, principalmente de 10º y 11º grado"
+                    />
+
+                    <!-- Pregunta sobre actividades especiales promovidas por MEDUCA -->
+                    <div class="label">
+                        <label for="actividades-promovidas-meduca">
+                            ¿Se realizan actividades especiales que promueven el aprendizaje y uso del idioma inglés que nacen desde MEDUCA y se realizan en su Centro Educativo? (Actividades especiales en inglés que realiza la institución internamente y/o con otras instituciones, como concursos o clubes de inglés)
+                        </label>
+                        <p class="error">Este campo es obligatorio</p>
+                    </div>
+                    <textarea
+                        required
+                        id="actividades-promovidas-meduca"
+                        placeholder="Describa las actividades especiales promovidas por MEDUCA."
+                    ></textarea>
+                </div>
+            </div>
+
+
+              
+              
+
+                    
+                
+                    
+
+                    <!-- Pregunta sobre las actividades realizadas y planificadas -->
+                    <div class="label">
+                        <label for="actividades-realizadas-planificadas">
+                            Mencione las realizadas durante el último año (2023) y las planificadas para 2024 (nombre y cantidad).
+                        </label>
+                        <p class="error">Este campo es obligatorio</p>
+                    </div>
+                    <textarea
+                        required
+                        id="actividades-realizadas-planificadas"
+                        placeholder="Liste las actividades con su nombre y la cantidad."
+                    ></textarea>
+
+                    <!-- Pregunta sobre el nombre de la empresa, institución o fundación organizadora -->
+                    <div class="label">
+                        <label for="nombre-organizadora">
+                            Mencione el nombre de la/la empresa, institución o fundación organizadora.
+                        </label>
+                        <p class="error">Este campo es obligatorio</p>
+                    </div>
+                    <input
+                        required
+                        type="text"
+                        id="nombre-organizadora"
+                        placeholder="Nombre de la entidad organizadora."
+                    />
+
+                    <!-- Pregunta sobre las empresas, instituciones o fundaciones organizadoras -->
+                    <div class="label">
+                        <label for="nombres-organizadores">
+                            Mencione el nombre de la/las empresas, instituciones o fundaciones organizadoras.
+                        </label>
+                        <p class="error">Este campo es obligatorio</p>
+                    </div>
+                    <input
+                        required
+                        type="text"
+                        id="nombres-organizadores"
+                        placeholder="Nombres de todas las entidades organizadoras involucradas."
+                    />
+                    <!-- Pregunta sobre actividades especiales promovidas por otras fundaciones e instituciones -->
+                    <div class="label">
+                        <label for="actividades-otras-organizaciones">
+                            ¿Se realizan actividades especiales que promueven el aprendizaje y uso del idioma inglés que nacen desde fundaciones, otras instituciones, empresa privada u otros organismos que se realizan en su Centro Educativo? (Actividades especiales en inglés que realiza la institución internamente y / o con otras instituciones (concursos, clubes de inglés, otros)).
+                        </label>
+                        <p class="error">Este campo es obligatorio</p>
+                    </div>
+                    <textarea
+                        required
+                        id="actividades-otras-organizaciones"
+                        placeholder="Describa las actividades especiales que realiza la institución internamente o con otras instituciones, como concursos o clubes de inglés."
+                    ></textarea>
+
+                    <!-- Pregunta sobre las actividades realizadas y planificadas por otras fundaciones e instituciones -->
+                    <div class="label">
+                        <label for="actividades-otras-organizaciones-detalles">
+                            Mencione las realizadas durante el último año (2023) y las planificadas para 2024. (nombre y cantidad)
+                        </label>
+                        <p class="error">Este campo es obligatorio</p>
+                    </div>
+                    <textarea
+                        required
+                        id="actividades-otras-organizaciones-detalles"
+                        placeholder="Liste las actividades, incluyendo nombres y cantidades."
+                    ></textarea>
+
+                    <!-- Pregunta sobre los nombres de las empresas, instituciones o fundaciones organizadoras -->
+                    <div class="label">
+                        <label for="nombres-organizaciones">
+                            Mencione el nombre de la/las empresas, instituciones o fundaciones organizadoras.
+                        </label>
+                        <p class="error">Este campo es obligatorio</p>
+                    </div>
+                    <input
+                        required
+                        type="text"
+                        id="nombres-organizaciones"
+                        placeholder="Nombres de los organizadores de las actividades."
+                    />
+
+                    <!-- Pregunta sobre el número de estudiantes y grados que participan en las actividades -->
+                    <div class="label">
+                        <label for="estudiantes-actividades">
+                            ¿Cuántos estudiantes participan actualmente en curso? ¿En qué grados están los estudiantes?
+                        </label>
+                        <p class="error">Este campo es obligatorio</p>
+                    </div>
+                    <input
+                        required
+                        type="text"
+                        id="estudiantes-actividades"
+                        placeholder="Ejemplo: 40 estudiantes de 9° a 11° grado."
+                    />
+
+                    <!-- Frecuencia de interacción en inglés durante actividades especiales -->
+                    <div class="label">
+                        <label for="frecuencia-interaccion">
+                            Durante la realización de actividades especiales en inglés, defina la frecuencia en la que interactúan los actores mencionados a continuación, en el idioma inglés: director, administrativos, docentes de inglés, docentes de grado, docentes de asignaturas especiales, padres de familia, estudiantes. Clasificación: Nunca, pocas veces, regularmente, algunas veces, siempre. (validar escala a utilizar)
+                        </label>
+                        <p class="error">Este campo es obligatorio</p>
+                    </div>
+                    <!-- Asumiendo que se necesita un campo para cada actor mencionado -->
+                    <!-- Ejemplo para uno de los actores: -->
+                    <select required id="frecuencia-interaccion-director">
+                        <option value="">Seleccione la frecuencia para el director</option>
+                        <option value="nunca">Nunca</option>
+                        <option value="pocas_veces">Pocas veces</option>
+                        <option value="regularmente">Regularmente</option>
+                        <option value="algunas_veces">Algunas veces</option>
+                        <option value="siempre">Siempre</option>
+                    </select>
+                    <!-- Repetir este campo select para cada actor mencionado -->
+
+                    <!-- Cursos de inglés tipo "After School" -->
+                    <div class="label">
+                        <label for="cursos-after-school-existen">
+                            ¿En su centro educativo, se realizan cursos de inglés tipo "After School" para los estudiantes?
+                        </label>
+                        <p class="error">Este campo es obligatorio</p>
+                    </div>
+                    <select required id="cursos-after-school-existen">
+                        <option value="">Seleccione una opción</option>
+                        <option value="si">Sí</option>
+                        <option value="no">No</option>
+                    </select>
+
+                    <div class="label">
+                        <label for="cursos-after-school-detalles">
+                            Mencione los cursos de inglés tipo "After School" para los estudiantes que se realizan en su Centro Educativo.
+                        </label>
+                        <p class="error">Este campo es obligatorio</p>
+                    </div>
+                    <textarea
+                        required
+                        id="cursos-after-school-detalles"
+                        placeholder="Describa los cursos de inglés 'After School' ofrecidos."
+                    ></textarea>
+
+                    <!-- Número de estudiantes y grados participantes en los cursos "After School" -->
+                    <div class="label">
+                        <label for="estudiantes-after-school">
+                            ¿Cuántos estudiantes participan actualmente en los cursos? ¿En qué grados están los estudiantes?
+                        </label>
+                        <p class="error">Este campo es obligatorio</p>
+                    </div>
+                    <input
+                        required
+                        type="text"
+                        id="estudiantes-after-school"
+                        placeholder="Ejemplo: 30 estudiantes, grados 8° a 11°."
+                    />
+
+                    <!-- Número de estudiantes por salón -->
+                    <div class="label">
+                        <label for="estudiantes-por-salon">
+                            Número de estudiantes por salón.
+                        </label>
+                        <p class="error">Este campo es obligatorio</p>
+                    </div>
+                    <input
+                        required
+                        type="number"
+                        id="estudiantes-por-salon"
+                        placeholder="Ingrese el número promedio de estudiantes por salón"
+                    />
+
+                    <!-- Número de estudiantes por grupo/profesor -->
+                    <div class="label">
+                        <label for="estudiantes-por-grupo">
+                            Número de estudiantes por grupo / profesor
+                        </label>
+                        <p class="error">Este campo es obligatorio</p>
+                    </div>
+                    <input
+                        required
+                        type="number"
+                        id="estudiantes-por-grupo"
+                        placeholder="Ingrese el número promedio de estudiantes por grupo o profesor"
+                    />
+
+                    <!-- Asignaturas en inglés diagramadas en el plan de estudios -->
+                    <div class="label">
+                        <label for="asignaturas-ingles-plan">
+                            ¿En el plan de estudios se tienen diagramadas otras asignaturas en idioma inglés?
+                        </label>
+                        <p class="error">Este campo es obligatorio</p>
+                    </div>
+                    <select required id="asignaturas-ingles-plan">
+                        <option value="">Seleccione una opción</option>
+                        <option value="si">Sí</option>
+                        <option value="no">No</option>
+                    </select>
+
+                    <!-- Asignaturas en inglés dictadas en el centro educativo -->
+                    <div class="label">
+                        <label for="asignaturas-ingles-dictadas">
+                            ¿En el Centro Educativo, se dictan otras asignaturas en idioma inglés? (Ejemplo: Math, Science, Tourism, etc.)
+                        </label>
+                        <p class="error">Este campo es obligatorio</p>
+                    </div>
+                    <textarea
+                        required
+                        id="asignaturas-ingles-dictadas"
+                        placeholder="Describa qué asignaturas en inglés se dictan en el centro educativo."
+                    ></textarea>
+
+                    <!-- Pregunta sobre la existencia de señalización en inglés en el centro educativo -->
+                    <div class="label">
+                        <label for="senalizacion-centro">
+                            ¿Cuentan con señalética / rotulaciones / letreros en inglés en su Centro Educativo?
+                        </label>
+                        <p class="error">Este campo es obligatorio</p>
+                    </div>
+                    <select required id="senalizacion-centro">
+                        <option value="">Seleccione una opción</option>
+                        <option value="si">Sí</option>
+                        <option value="no">No</option>
+                    </select>
+
+                    <!-- Cantidad de señalizaciones en inglés en el centro educativo -->
+                    <div class="label">
+                        <label for="cantidad-senalizaciones-centro">
+                            Cantidad de Señalizaciones en Inglés en su Centro Educativo
+                        </label>
+                        <p class="error">Este campo es obligatorio</p>
+                    </div>
+                    <input
+                        required
+                        type="number"
+                        id="cantidad-senalizaciones-centro"
+                        placeholder="Ingrese la cantidad total de señalizaciones en inglés"
+                    />
+
+                    <!-- Tipo de señalizaciones en inglés -->
+                    <div class="label">
+                        <label for="tipo-senalizaciones">
+                            Tipo de señalizaciones en inglés (mencione algunas como: indicaciones de salones, instrucciones, avisos, nombres de objetos, otros)
+                        </label>
+                        <p class="error">Este campo es obligatorio</p>
+                    </div>
+                    <textarea
+                        required
+                        id="tipo-senalizaciones"
+                        placeholder="Describa los tipos de señalizaciones en inglés presentes en el centro educativo."
+                    ></textarea>
+
+                    <!-- Pregunta sobre la existencia de señalización en inglés en las aulas -->
+                    <div class="label">
+                        <label for="senalizacion-aula">
+                            ¿Cuentan con señalética / rotulaciones / letreros en inglés en el aula de clases?
+                        </label>
+                        <p class="error">Este campo es obligatorio</p>
+                    </div>
+                    <select required id="senalizacion-aula">
+                        <option value="">Seleccione una opción</option>
+                        <option value="si">Sí</option>
+                        <option value="no">No</option>
+                    </select>
+
+                    <!-- Cantidad de señalizaciones en inglés dentro del aula -->
+                    <div class="label">
+                        <label for="cantidad-senalizaciones-aula">
+                            Cantidad de Señalizaciones en Inglés dentro del aula de clases
+                        </label>
+                        <p class="error">Este campo es obligatorio</p>
+                    </div>
+                    <input
+                        required
+                        type="number"
+                        id="cantidad-senalizaciones-aula"
+                        placeholder="Ingrese la cantidad de señalizaciones en inglés dentro del aula"
+                    />
+                    <!-- Tipo de señalizaciones en inglés -->
+                    <div class="label">
+                        <label for="tipo-senalizaciones-ingles">
+                            Tipo de señalizaciones en inglés (mencione algunas como: indicaciones de salones, instrucciones, avisos, nombre de objetos, otros)
+                        </label>
+                        <p class="error">Este campo es obligatorio</p>
+                    </div>
+                    <textarea
+                        required
+                        id="tipo-senalizaciones-ingles"
+                        placeholder="Describa los tipos de señalizaciones en inglés."
+                    ></textarea>
+
+                    <!-- Porcentaje de diálogo en inglés durante recesos/almuerzo entre estudiantes -->
+                    <div class="label">
+                        <label for="porcentaje-dialogo-ingles-recesos">
+                            Porcentaje de Diálogo en Inglés durante Recesos/Almuerzo entre estudiantes
+                        </label>
+                        <p class="error">Este campo es obligatorio</p>
+                    </div>
+                    <input
+                        required
+                        type="number"
+                        id="porcentaje-dialogo-ingles-recesos"
+                        placeholder="Ingrese el porcentaje aproximado"
+                        min="0"
+                        max="100"
+                    />
+
+                    <!-- Porcentaje de interacción en inglés con directivos o administrativos -->
+                    <div class="label">
+                        <label for="porcentaje-interaccion-directivos">
+                            Porcentaje en la que usted como docente interactúa con directivos o administrativos en idioma inglés dentro del centro educativo (fuera de las horas de clase)
+                        </label>
+                        <p class="error">Este campo es obligatorio</p>
+                    </div>
+                    <input
+                        required
+                        type="number"
+                        id="porcentaje-interaccion-directivos"
+                        placeholder="Ingrese el porcentaje aproximado"
+                        min="0"
+                        max="100"
+                    />
+
+                    <!-- Porcentaje de interacción en inglés con otros docentes -->
+                    <div class="label">
+                        <label for="porcentaje-interaccion-docentes">
+                            Porcentaje en la que usted como docente interactúa con otros docentes en idioma inglés dentro del centro educativo (fuera de las horas de clase)
+                        </label>
+                        <p class="error">Este campo es obligatorio</p>
+                    </div>
+                    <input
+                        required
+                        type="number"
+                        id="porcentaje-interaccion-docentes"
+                        placeholder="Ingrese el porcentaje aproximado"
+                        min="0"
+                        max="100"
+                    />
+
+                    <!-- Porcentaje de interacción en inglés con padres de familia -->
+                    <div class="label">
+                        <label for="porcentaje-interaccion-padres">
+                            Porcentaje en la que usted como docente interactúa con padres de familia en idioma inglés dentro del centro educativo (fuera de las horas de clase)
+                        </label>
+                        <p class="error">Este campo es obligatorio</p>
+                    </div>
+                    <input
+                        required
+                        type="number"
+                        id="porcentaje-interaccion-padres"
+                        placeholder="Ingrese el porcentaje aproximado"
+                        min="0"
+                        max="100"
+                    />
+
+                    <!-- Porcentaje de interacción con estudiantes en inglés fuera de clases -->
+                    <div class="label">
+                        <label for="porcentaje-interaccion-estudiantes">
+                            Porcentaje en la que usted como docente interactúa con estudiantes en idioma inglés dentro del centro educativo (fuera de las horas de clase)
+                        </label>
+                        <p class="error">Este campo es obligatorio</p>
+                    </div>
+                    <input
+                        required
+                        type="number"
+                        id="porcentaje-interaccion-estudiantes"
+                        placeholder="Ingrese el porcentaje, ej. 20 para 20%"
+                        min="0"
+                        max="100"
+                    />
+
+                    <!-- Pregunta sobre la colocación de música en inglés fuera del aula -->
+                    <div class="label">
+                        <label for="musica-ingles-aula">
+                            ¿Se coloca música en inglés fuera del aula de clases?
+                        </label>
+                        <p class="error">Este campo es obligatorio</p>
+                    </div>
+                    <select required id="musica-ingles-aula">
+                        <option value="">Seleccione una opción</option>
+                        <option value="si">Sí</option>
+                        <option value="no">No</option>
+                    </select>
+
+                    <!-- Frecuencia con la que se escucha música en inglés fuera del aula -->
+                    <div class="label">
+                        <label for="frecuencia-musica-ingles">
+                            ¿Con qué frecuencia se escucha música en inglés fuera del aula de clases?
+                        </label>
+                        <p class="error">Este campo es obligatorio</p>
+                    </div>
+                    <select required id="frecuencia-musica-ingles">
+                        <option value="">Seleccione la frecuencia</option>
+                        <option value="nunca">Nunca</option>
+                        <option value="pocas_veces">Pocas veces</option>
+                        <option value="regularmente">Regularmente</option>
+                        <option value="frecuentemente">Frecuentemente</option>
+                        <option value="siempre">Siempre</option>
+                    </select>
+
+                    <!-- Años de experiencia en impartir clases -->
+                    <div class="label">
+                        <label for="anios-experiencia">Años de experiencia en impartir clases</label>
+                        <p class="error">Este campo es obligatorio</p>
+                    </div>
+                    <input
+                        required
+                        type="number"
+                        id="anios-experiencia"
+                        placeholder="Ingrese el número de años de experiencia"
+                    />
+
+                    <!-- Sector de experiencia -->
+                    <div class="label">
+                        <label for="sector-experiencia">Sector en el que ha tenido experiencia</label>
+                        <p class="error">Este campo es obligatorio</p>
+                    </div>
+                    <select required id="sector-experiencia">
+                        <option value="">Seleccione un sector</option>
+                        <option value="oficial">Oficial</option>
+                        <option value="particular">Particular</option>
+                        <option value="ambos">Ambos</option>
+                    </select>
+
+                    <!-- Niveles en los que ha impartido clases -->
+                    <div class="label">
+                        <label for="niveles-impartido">¿En qué niveles ha impartido clases?</label>
+                        <p class="error">Este campo es obligatorio</p>
+                    </div>
+                    <!-- Suponiendo múltiples selecciones posibles -->
+                    <select required id="niveles-impartido" multiple>
+                        <option value="inicial">Inicial</option>
+                        <option value="primaria">Primaria</option>
+                        <option value="premedia">Premedia</option>
+                        <option value="media">Media</option>
+                    </select>
+
+                    <!-- Nivel actual de enseñanza -->
+                    <div class="label">
+                        <label for="nivel-actual">Nivel en el que imparte clases actualmente</label>
+                        <p class="error">Este campo es obligatorio</p>
+                    </div>
+                    <input
+                        required
+                        type="text"
+                        id="nivel-actual"
+                        placeholder="Ingrese el nivel actual de enseñanza"
+                    />
+
+                    <!-- Título relacionado a la enseñanza del inglés -->
+                    <div class="label">
+                        <label for="titulo-ensenanza-ingles">¿Cuenta con un título relacionado a la enseñanza del idioma inglés?</label>
+                        <p class="error">Este campo es obligatorio</p>
+                    </div>
+                    <select required id="titulo-ensenanza-ingles">
+                        <option value="">Seleccione la procedencia del título</option>
+                        <option value="nacional">Nacional</option>
+                        <option value="internacional">Internacional</option>
+                    </select>
+
+                    <!-- Títulos formales relacionados a la enseñanza del inglés -->
+                    <div class="label">
+                        <label for="titulos-formales">
+                            Mencione sus títulos formales relacionados a la enseñanza del idioma inglés y el año de su obtención.
+                        </label>
+                        <p class="error">Este campo es obligatorio</p>
+                    </div>
+                    <textarea
+                        required
+                        id="titulos-formales"
+                        placeholder="Detalle sus títulos y el año de obtención."
+                    ></textarea>
+
+                    <!-- Cursos de educación continua nacionales -->
+                    <div class="label">
+                        <label for="cursos-continua-nacionales">
+                            Mencione sus cursos de educación continua obtenidos a nivel nacional relacionados a la enseñanza del idioma inglés y el año en que las obtuvo. Cantidad de horas de la capacitación.
+                        </label>
+                        <p class="error">Este campo es obligatorio</p>
+                    </div>
+                    <textarea
+                        required
+                        id="cursos-continua-nacionales"
+                        placeholder="Detalle los cursos, año y cantidad de horas."
+                    ></textarea>
+
+                    <!-- Cursos de educación continua internacionales -->
+                    <div class="label">
+                        <label for="cursos-continua-internacionales">
+                            Mencione sus cursos de educación continua obtenidos a nivel internacional relacionados a la enseñanza del idioma inglés y el año en que las obtuvo. Cantidad de horas de la capacitación.
+                        </label>
+                        <p class="error">Este campo es obligatorio</p>
+                    </div>
+                    <textarea
+                        required
+                        id="cursos-continua-internacionales"
+                        placeholder="Detalle los cursos, año y cantidad de horas."
+                    ></textarea>
+                    
+                    <!-- Certificación de nivel de inglés -->
+                    <div class="label">
+                        <label for="certificacion-ingles">¿Cuenta con una certificación de su nivel de inglés?</label>
+                        <p class="error">Este campo es obligatorio</p>
+                    </div>
+                    <select required id="certificacion-ingles">
+                        <option value="">Seleccione una opción</option>
+                        <option value="si">Sí</option>
+                        <option value="no">No</option>
+                    </select>
+
+                    <!-- Nombre de la titulación de inglés -->
+                    <div class="label">
+                        <label for="nombre-titulacion">Selecciona el nombre de la titulación</label>
+                        <p class="error">Este campo es obligatorio</p>
+                    </div>
+                    <select required id="nombre-titulacion">
+                        <option value="">Seleccione la titulación</option>
+                        <option value="cambridge">Cambridge English Qualifications</option>
+                        <option value="linguaskill">Linguaskill</option>
+                        <option value="ielts">IELTS</option>
+                        <option value="toefl">TOEFL</option>
+                        <option value="toeic">TOEIC</option>
+                        <option value="oxford">Oxford Test of English</option>
+                        <option value="otra">Otra</option>
+                    </select>
+
+                    <!-- Año y vencimiento de la certificación -->
+                    <div class="label">
+                        <label for="ano-certificacion">¿De qué año es la certificación? ¿Cuándo vence?</label>
+                        <p class="error">Este campo es obligatorio</p>
+                    </div>
+                    <input
+                        required
+                        type="text"
+                        id="ano-certificacion"
+                        placeholder="Ejemplo: 2020, vence en 2025"
+                    />
+
+                    <!-- Nivel de inglés del docente -->
+                    <div class="label">
+                        <label for="nivel-ingles-docente">Nivel de Ingles del Docente:</label>
+                        <p class="error">Este campo es obligatorio</p>
+                    </div>
+                    <select required id="nivel-ingles-docente">
+                        <option value="">Seleccione el nivel</option>
+                        <option value="a0">A0: Principiante</option>
+                        <option value="a1-a2">A1-A2: Básico</option>
+                        <option value="a2-b1">A2-B1: Pre-intermedio</option>
+                        <option value="b1">B1: Intermedio</option>
+                        <option value="b2">B2: Intermedio-Alto</option>
+                        <option value="c1-c2">C1-C2: Avanzado</option>
+                    </select>
+
+                    <!-- Pregunta sobre conocimiento de nivel de inglés si no está certificado -->
+                    <div class="label" id="label-nivel-ingles-sin-certificado">
+                        <label for="nivel-ingles-sin-certificado">Si no está certificado, ¿conoce su nivel de inglés?</label>
+                        <p class="error">Este campo es obligatorio</p>
+                    </div>
+                    <select required id="nivel-ingles-sin-certificado">
+                        <option value="">Seleccione el nivel que considera que tiene</option>
+                        <option value="a0">A0: Principiante</option>
+                        <option value="a1-a2">A1-A2: Básico</option>
+                        <option value="a2-b1">A2-B1: Pre-intermedio</option>
+                        <option value="b1">B1: Intermedio</option>
+                        <option value="b2">B2: Intermedio-Alto</option>
+                        <option value="c1-c2">C1-C2: Avanzado</option>
+                    </select>
+
+                    <!-- Disposición para tomar o renovar certificación de inglés -->
+                    <div class="label">
+                        <label for="disposicion-certificacion">¿Estarías dispuesto a tomar o renovar su certificación en el idioma inglés?</label>
+                        <p class="error">Este campo es obligatorio</p>
+                    </div>
+                    <select required id="disposicion-certificacion">
+                        <option value="">Seleccione una opción</option>
+                        <option value="si">Sí</option>
+                        <option value="no">No</option>
+                        <option value="quizas">Quizás</option>
+                    </select>
+
+                    <!-- Pregunta sobre la existencia de material multimedia -->
+                    <div class="label">
+                        <label for="material-multimedia-existencia">
+                            ¿Cuentan con material multimedia? (Tablero de tiza, tablero de marcador, Pantallas interactivas, CD, DVD, MP4, Servicios de Streaming, otros)
+                        </label>
+                        <p class="error">Este campo es obligatorio</p>
+                    </div>
+                    <select required id="material-multimedia-existencia">
+                        <option value="">Seleccione una opción</option>
+                        <option value="si">Sí</option>
+                        <option value="no">No</option>
+                    </select>
+
+                    <!-- Detalle de los materiales multimedia con los que cuenta el centro educativo -->
+                    <div class="label">
+                        <label for="detalle-material-multimedia">
+                            ¿Cuáles son los materiales multimedia con los que cuenta el Centro educativo? Un material multimedia en educación es un recurso que combina dos o más medios (texto, imágenes, audio, video, animaciones, etc.) para presentar información de forma interactiva y atractiva. Estos materiales se utilizan para apoyar el proceso de enseñanza-aprendizaje en diferentes contextos educativos.
+                            Presentaciones multimedia: Presentaciones interactivas que combinan texto, imágenes, audio y video.
+                            Simulaciones: Programas informáticos que permiten recrear procesos o fenómenos de la vida real.
+                            Juegos educativos: Juegos interactivos que enseñan conceptos o habilidades específicas.
+                            Objetos de aprendizaje: Recursos digitales reutilizables que se pueden utilizar en diferentes contextos educativos.
+                            Entornos virtuales de aprendizaje: Plataformas online que ofrecen una experiencia de aprendizaje completa e inmersiva.
+                        </label>
+                        <p class="error">Este campo es obligatorio</p>
+                    </div>
+                    <textarea
+                        required
+                        id="detalle-material-multimedia"
+                        placeholder="Describa los materiales multimedia disponibles, como presentaciones multimedia, simulaciones, juegos educativos, objetos de aprendizaje, entornos virtuales de aprendizaje, etc."
+                    ></textarea>
+
+                    <!-- Cantidad de materiales multimedia -->
+                    <div class="label">
+                        <label for="cantidad-material-multimedia">
+                            ¿Con cuántos materiales multimedia cuenta el Centro educativo? (CD, DVD, MP4, Servicios de Streaming, otros)
+                        </label>
+                        <p class="error">Este campo es obligatorio</p>
+                    </div>
+                    <input
+                        required
+                        type="number"
+                        id="cantidad-material-multimedia"
+                        placeholder="Ingrese la cantidad de materiales multimedia"
+                    />
+
+                    <!-- Tipo de recursos multimedia en ESTER -->
+                    <div class="label">
+                        <label for="tipo-recursos-multimedia">
+                            Tipo de recursos multimedia en ESTER: cursos, OVA, libros, audiolibros, otros.
+                        </label>
+                        <p class="error">Este campo es obligatorio</p>
+                    </div>
+                    <textarea
+                        required
+                        id="tipo-recursos-multimedia"
+                        placeholder="Describa los tipos de recursos multimedia disponibles en ESTER."
+                    ></textarea>
+
+                    <!-- Cantidad de recursos multimedia en ESTER -->
+                    <div class="label">
+                        <label for="cantidad-recursos-multimedia">
+                            Cantidad de recursos multimedia en ESTER: cursos, OVA, libros, audiolibros, otros.
+                        </label>
+                        <p class="error">Este campo es obligatorio</p>
+                    </div>
+                    <input
+                        required
+                        type="number"
+                        id="cantidad-recursos-multimedia"
+                        placeholder="Ingrese la cantidad total de recursos multimedia en ESTER"
+                    />
+
+                    <!-- Materiales físicos fungibles -->
+                    <div class="label">
+                        <label for="materiales-fisicos-fungibles">
+                            ¿Cuenta con materiales físicos fungibles para el aprendizaje del idioma inglés? Papelería: folios, cuadernos, libretas, carpetas, sobres, etc.
+                            Materiales de escritura: bolígrafos, lápices, rotuladores, gomas de borrar, tizas, etc.
+                            Materiales de dibujo y pintura: cartulinas, pinturas, pinceles, acuarelas, etc.
+                            Materiales para manualidades: plastilina, pegamento, tijeras, papel celofán, etc.
+                            Materiales de laboratorio: tubos de ensayo, probetas, pipetas, etc.
+                            Recursos tecnológicos: cartuchos de tinta, tóner para impresoras, CDs, DVDs, etc.
+                        </label>
+                        <p class="error">Este campo es obligatorio</p>
+                    </div>
+                    <select required id="materiales-fisicos-fungibles">
+                        <option value="">Seleccione una opción</option>
+                        <option value="si">Sí</option>
+                        <option value="no">No</option>
+                    </select>
+
+                    <!-- Descripción de materiales físicos para el aprendizaje del inglés -->
+                    <div class="label">
+                        <label for="descripcion-materiales-ingles">
+                            ¿Cuáles son materiales físicos para el aprendizaje del idioma inglés cuenta el centro educativo?
+                        </label>
+                        <p class="error">Este campo es obligatorio</p>
+                    </div>
+                    <textarea
+                        required
+                        id="descripcion-materiales-ingles"
+                        placeholder="Describa los materiales físicos disponibles para el aprendizaje del inglés."
+                    ></textarea>
+
+                    <!-- Cantidad de materiales físicos para el aprendizaje del inglés -->
+                    <div class="label">
+                        <label for="cantidad-materiales-ingles">
+                            ¿Con qué cantidad de materiales físicos para el aprendizaje del idioma inglés cuenta el centro educativo?
+                        </label>
+                        <p class="error">Este campo es obligatorio</p>
+                    </div>
+                    <input
+                        required
+                        type="number"
+                        id="cantidad-materiales-ingles"
+                        placeholder="Ingrese la cantidad total de materiales físicos"
+                    />
+
+                    <!-- Frecuencia de reposición de materiales físicos para inglés -->
+                    <div class="label">
+                        <label for="frecuencia-reposicion-materiales">
+                            ¿Con qué frecuencia reponen los materiales físicos para el aprendizaje del idioma inglés cuenta el centro educativo?
+                        </label>
+                        <p class="error">Este campo es obligatorio</p>
+                    </div>
+                    <select required id="frecuencia-reposicion-materiales">
+                        <option value="">Seleccione la frecuencia</option>
+                        <option value="semanal">Semanal</option>
+                        <option value="mensual">Mensual</option>
+                        <option value="trimestral">Trimestral</option>
+                        <option value="semestral">Semestral</option>
+                        <option value="anual">Anual</option>
+                        <option value="según_necesidad">Según necesidad</option>
+                    </select>
+
+                    <!-- Medios de compra de materiales físicos para inglés -->
+                    <div class="label">
+                        <label for="medios-compra-materiales">
+                            ¿A través de qué medios compran los materiales físicos para el aprendizaje del idioma inglés cuenta el centro educativo?
+                        </label>
+                        <p class="error">Este campo es obligatorio</p>
+                    </div>
+                    <textarea
+                        required
+                        id="medios-compra-materiales"
+                        placeholder="Describa los medios a través de los cuales el centro educativo adquiere los materiales, como Fondos de FECE, Asociación de padres de familia, etc."
+                    ></textarea>
+
+                    <!-- Disponibilidad de software de inglés -->
+                    <div class="label">
+                        <label for="disponibilidad-software-ingles">
+                            ¿Cuentan con un software de inglés usado en las escuelas bilingües, para el aprendizaje del inglés?
+                        </label>
+                        <p class="error">Este campo es obligatorio</p>
+                    </div>
+                    <select required id="disponibilidad-software-ingles">
+                        <option value="">Seleccione una opción</option>
+                        <option value="si">Sí</option>
+                        <option value="no">No</option>
+                    </select>
+
+                    <!-- Cantidad de software de inglés -->
+                    <div class="label">
+                        <label for="cantidad-software-ingles">
+                            Cantidad de software de inglés usado en las escuelas bilingües, para el aprendizaje del inglés.
+                        </label>
+                        <p class="error">Este campo es obligatorio</p>
+                    </div>
+                    <input
+                        required
+                        type="number"
+                        id="cantidad-software-ingles"
+                        placeholder="Ingrese la cantidad de software de inglés disponible"
+                    />
+
+                    <!-- Lista de software de inglés -->
+                    <div class="label">
+                        <label for="lista-software-ingles">
+                            Mencione los softwares de inglés usado en las escuelas bilingües, para el aprendizaje del inglés.
+                        </label>
+                        <p class="error">Este campo es obligatorio</p>
+                    </div>
+                    <textarea
+                        required
+                        id="lista-software-ingles"
+                        placeholder="Enumere los softwares de inglés disponibles."
+                    ></textarea>
+
+                    <!-- Licencias de software -->
+                    <div class="label">
+                        <label for="licencias-software">
+                            Los softwares requieren licencias renovables para su uso o tienen licencias perpetuas (de libre acceso en el tiempo).
+                        </label>
+                        <p class="error">Este campo es obligatorio</p>
+                    </div>
+                    <select required id="licencias-software">
+                        <option value="">Seleccione el tipo de licencia</option>
+                        <option value="renovable">Renovables</option>
+                        <option value="perpetua">Perpetuas</option>
+                    </select>
+
+                    <!-- Requisito de acceso a internet -->
+                    <div class="label">
+                        <label for="acceso-internet-software">
+                            Los softwares disponibles requieren acceso a internet para funcionar?
+                        </label>
+                        <p class="error">Este campo es obligatorio</p>
+                    </div>
+                    <select required id="acceso-internet-software">
+                        <option value="">Seleccione una opción</option>
+                        <option value="si">Sí</option>
+                        <option value="no">No</option>
+                    </select>
+
+                    <!-- Cantidad de usuarios disponibles -->
+                    <div class="label">
+                        <label for="usuarios-disponibles">
+                            ¿Cuántos usuarios tienen disponibles para el uso de los estudiantes?
+                        </label>
+                        <p class="error">Este campo es obligatorio</p>
+                    </div>
+                    <input
+                        required
+                        type="number"
+                        id="usuarios-disponibles"
+                        placeholder="Ingrese el número de usuarios disponibles"
+                    />
+                <!-- Fin dato caracterizacion del centro educativo bilingue -->
+          </form>
+          
+          <div class="btns">
+            <button class="next-stp visita" type="submit">Siguiente</button>
+          </div>
+        </div>
+        <!-- Step 1 end -->
+        <!-- * Step 2 start -->
+        <div class="stp step-2">
+          <div class="header">
+            <h1 class="title">Preguntas del formulario</h1>
+          </div>  
+          <form>
+            <div class="label">
+              <label for="phone">1.¿Cuentan con enlace a internet contratado?</label>
+              <p class="error">Este campo es obligatorio</p>
+            </div>
+            <input
+              required
+              type="text"
+              id="phone"
+              placeholder="Tu respuesta"
+            />  
+            <div class="label">
+              <label for="phone">2.¿Cuál es su proveedor?</label>
+              <p class="error">Este campo es obligatorio</p>
+            </div>
+            <input
+              required
+              type="text"
+              id="phone"
+              placeholder="Tu respuesta"
+            />
+            <div class="label">
+              <label for="phone">3.Total de laboratorios de informática</label>
+              <p class="error">Este campo es obligatorio</p>
+            </div>
+            <input
+              required
+              type="text"
+              id="phone"
+              placeholder="Tu respuesta"
+            />
+            <div class="label">
+              <label for="phone">4.Total de laboratorios de idiomas</label>
+              <p class="error">Este campo es obligatorio</p>
+            </div>
+            <input
+              required
+              type="text"
+              id="phone"
+              placeholder="Tu respuesta"
+            />
+          </form>
+          <div class="btns">
+            <button class="prev-stp" type="button">Atras</button>
+            <button class="next-stp" type="submit">Siguiente</button>
+          </div>
+        </div>
+        <!-- Step 2 end -->
+        <!-- * Step 3 start -->
+        <div class="stp step-3">
+          <div class="header">
+            <h1 class="title">Preguntas del formulario</h1>
+          </div>  
+          <form>
+            <div class="label">
+              <label for="phone">5.Total de laboratorios de contabilidad</label>
+              <p class="error">Este campo es obligatorio</p>
+            </div>
+            <input
+              required
+              type="text"
+              id="phone"
+              placeholder="Tu respuesta"
+            />  
+            <div class="label">
+              <label for="phone">6.Total de laboratorios de física</label>
+              <p class="error">Este campo es obligatorio</p>
+            </div>
+            <input
+              required
+              type="text"
+              id="phone"
+              placeholder="Tu respuesta"
+            />
+            <div class="label">
+              <label for="phone">7.Total de laboratorios de química</label>
+              <p class="error">Este campo es obligatorio</p>
+            </div>
+            <input
+              required
+              type="text"
+              id="phone"
+              placeholder="Tu respuesta"
+            />
+            <div class="label">
+              <label for="phone">8.Total de laboratorios de biología</label>
+              <p class="error">Este campo es obligatorio</p>
+            </div>
+            <input
+              required
+              type="text"
+              id="phone"
+              placeholder="Tu respuesta"
+            />
+          </form>
+          <div class="btns">
+            <button class="prev-stp" type="button">Atras</button>
+            <button class="next-stp" type="submit">Siguiente</button>
+          </div>
+        </div>
+        <!-- Step 3 end -->
+        <!-- * Step 4 start -->
+        <div class="stp step-4">
+          <div class="header">
+            <h1 class="title">Preguntas del formulario</h1>
+          </div>  
+          <form>
+            <div class="label">
+              <label for="phone">9.Total de laboratorios de ciencias naturales</label>
+              <p class="error">Este campo es obligatorio</p>
+            </div>
+            <input
+              required
+              type="text"
+              id="phone"
+              placeholder="Tu respuesta"
+            />  
+            <div class="label">
+              <label for="phone">10.Total de pabellones </label>
+              <p class="error">Este campo es obligatorio</p>
+            </div>
+            <input
+              required
+              type="text"
+              id="phone"
+              placeholder="Tu respuesta"
+            />
+            <div class="label">
+              <label for="phone">11.¿Cuenta con red de datos profesional? (routing, switch y aps)</label>
+              <p class="error">Este campo es obligatorio</p>
+            </div>
+            <input
+              required
+              type="text"
+              id="phone"
+              placeholder="Tu respuesta"
+            />
+            <div class="label">
+              <label for="phone">12.¿Cuentan con sistema de seguridad o videovigilancia?</label>
+              <p class="error">Este campo es obligatorio</p>
+            </div>
+            <input
+              required
+              type="text"
+              id="phone"
+              placeholder="Tu respuesta"
+            />
+          </form>
+          <div class="btns">
+            <button class="prev-stp" type="button">Atras</button>
+            <button class="next-stp" type="submit">Enviar</button>
+          </div>
+        </div>
+        <!-- Step 4 end -->
+        <!-- Step 5 start -->
+        <div class="stp step-5">
+          <img src="{% static '/assets/images/icon-thank-you.svg' %}"/>
+          <div class="header">
+            <h1 class="title">¡Muchas gracias por tu solicitud!</h1>
+            <p class="exp">
+              Contactaremos contigo en breve.
+            </p>
+          </div>
+        </div>
+        <!-- Step 5 end -->
+      </div>
+    </div>
+  </body>
+</html>
