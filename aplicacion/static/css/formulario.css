@@ -476,13 +476,14 @@ input:checked + .slider:before {
   }
 }
 .form-row{
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  gap: 10px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 10px;
 }
 .form-group{
-  width: 18.35%;
+  width: 100%;
+  display: grid;
+  grid-auto-rows: auto;
 }
 form input{
   width: 100%;
