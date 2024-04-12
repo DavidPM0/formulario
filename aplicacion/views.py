@@ -6,3 +6,12 @@ def home(request):
 
 def formulario(request):
     return render(request, "aplicacion/formulario.html")
+
+def docente(request):
+    return render(request, "aplicacion/docente.html")
+
+def director(request):
+    return render(request, "aplicacion/director.html")
+
+def director_2(request):
+    return render(request, "aplicacion/director_2.html")

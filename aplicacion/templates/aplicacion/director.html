@@ -1,0 +1,105 @@
+{% extends 'base/base-formulario.html' %}
+{% load static tailwind_tags %}
+
+{% block numero-pagina %}
+<div class="form-sidebar p-6 h-full">
+    <div class="step active">
+        <div class="circle">1</div>
+        <div class="step-content">
+            <span>Paso</span>
+        </div>
+    </div>
+    <div class="step">
+        <div class="circle">2</div>
+        <div class="step-content">
+        <span>Paso</span>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block contenido-formulario %}
+    <h6 class="text-xl font-bold text-[#233559] mb-6">
+        Información personal director
+    </h6>
+    <div class="flex flex-wrap">
+
+        <div class="w-full lg:w-6/12 pr-4">
+            <div class="relative w-full mb-3">
+                <label class="block text-sm font-medium text-[#233559]" for="nombre-director">
+                    Nombre del director
+                </label>
+                <input type="text" class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm" placeholder="Escribe tu nombre" id="nombre-director">
+            </div>
+        </div>
+
+        <div class="w-full lg:w-6/12">
+            <div class="relative w-full mb-3">
+                <label class="block text-sm font-medium text-[#233559]" for="apellido-director">
+                    Apellido del director
+                </label>
+                <input type="text" class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm" placeholder="Escribe tu apellido" id="apellido-director">
+            </div>
+        </div>
+
+        <div class="w-full lg:w-6/12 pr-4">
+            <div class="relative w-full mb-3">
+                <label class="block text-sm font-medium text-[#233559]" for="cedula-director">
+                    Cédula del director
+                </label>
+                <input type="number" class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm" placeholder="Coloca tu cédula" min="0" id="cedula-director">
+            </div>
+        </div>
+
+        <div class="w-full lg:w-6/12">
+            <div class="relative w-full mb-3">
+                <label class="block text-sm font-medium text-[#233559]" for="tel-ofi-director">
+                    Teléfono oficina del director
+                </label>
+                <input type="tel" class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm" placeholder="Escriba el teléfono de oficina del director" id="tel-ofi-director">
+            </div>
+        </div>
+
+        <div class="w-full lg:w-6/12 pr-4">
+            <div class="relative w-full mb-3">
+                <label class="block text-sm font-medium text-[#233559]" for="tel-per-director">
+                    Teléfono personal del director
+                </label>
+                <input type="tel" class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm" placeholder="Escribe tu teléfono personal" id="tel-per-director">
+            </div>
+        </div>
+        
+        <div class="w-full lg:w-6/12">
+            <div class="relative w-full mb-3">
+                <label class="block text-sm font-medium text-[#233559]" for="correo-inst-director">
+                    Correo institucional del director
+                </label>
+                <input type="email" class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm" placeholder="example@example.com" id="correo-inst-director">
+            </div>
+        </div>
+
+        <div class="w-full lg:w-6/12 pr-4">
+            <div class="relative w-full mb-3">
+                <label class="block text-sm font-medium text-[#233559]" for="correo-per-director1">
+                    Correo personal del director
+                </label>
+                <input type="email" class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm" placeholder="example@example.com" id="correo-per-director1">
+            </div>
+        </div>
+
+        <div class="w-full lg:w-6/12">
+            <div class="relative w-full mb-3">
+                <label class="block text-sm font-medium text-[#233559]" for="correo-per-director2">
+                    Correo personal del director
+                </label>
+                <input type="email" class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm" placeholder="example@example.com" id="correo-per-director2">
+            </div>
+        </div>
+
+        <div>
+            <a href="{% url 'director_2' %}" class="mt-6 w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-[#483eff] hover:bg-[#665eff] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                Siguiente
+            </a>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,105 @@
+{% extends 'base/base-formulario.html' %}
+{% load static tailwind_tags %}
+
+{% block numero-pagina %}
+<div class="form-sidebar p-6 h-full">
+    <div class="step">
+        <div class="circle">1</div>
+        <div class="step-content">
+            <span>Paso</span>
+        </div>
+    </div>
+    <div class="step active">
+        <div class="circle">2</div>
+        <div class="step-content">
+        <span>Paso</span>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block barra-porcentaje %}
+<div class="bg-[#483eff] text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded-full" style="width: 100%"> 100%</div>
+{% endblock %}
+
+{% block contenido-formulario %}
+    <h6 class="text-xl font-bold text-[#233559] mb-6">
+        Información del Director 2
+    </h6>
+    <div class="flex flex-wrap">
+        <div class="w-full lg:w-6/12 pr-4">
+            <div class="relative w-full mb-3">
+                <label class="block text-sm font-medium text-[#233559]" for="director-2-codigo-siace">
+                    Código SIACE
+                </label>
+                <input type="text" class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm" placeholder="Escriba el código" id="director-2-codigo-siace">
+            </div>
+        </div>
+
+        <div class="w-full lg:w-6/12">
+            <div class="relative w-full mb-3">
+                <label class="block text-sm font-medium text-[#233559]" for="director-2-nombre-centro">
+                    Nombre del Centro educativo
+                </label>
+                <input type="text" class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm" placeholder="Escriba el nombre del centro educativo" id="director-2-nombre-centro">
+            </div>
+        </div>
+
+        <div class="w-full lg:w-6/12 pr-4">
+            <div class="relative w-full mb-3">
+                <label class="block text-sm font-medium text-[#233559]" for="director-2-region-educativa">
+                    Región Educativa
+                </label>
+                <input type="text" class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm" placeholder="Escriba la región educativa" id="director-2-region-educativa">
+            </div>
+        </div>
+
+        <div class="w-full lg:w-6/12">
+            <div class="relative w-full mb-3">
+                <label class="block text-sm font-medium text-[#233559]" for="director-2-provincia">
+                    Provincia*
+                </label>
+                <input type="text" class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm" placeholder="Escriba el nombre de la provincia" id="director-2-provincia">
+            </div>
+        </div>
+
+        <div class="w-full lg:w-6/12 pr-4">
+            <div class="relative w-full mb-3">
+                <label class="block text-sm font-medium text-[#233559]" for="director-2-direccion">
+                    Dirección*
+                </label>
+                <input type="text" class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm" placeholder="Escriba la dirección" id="director-2-direccion">
+            </div>
+        </div>
+
+        <div class="w-full lg:w-6/12">
+            <div class="relative w-full mb-3">
+                <label class="block text-sm font-medium text-[#233559]" for="director-2-geolocalizacion">
+                    Geolocalización*
+                </label>
+                <input type="text" class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm" placeholder="Escriba su geolocalización" id="director-2-geolocalizacion">
+            </div>
+        </div>
+
+        <div class="w-full">
+            <div class="relative w-full mb-3">
+                <label class="block text-sm font-medium text-[#233559]" for="director-2-nivel-escolar">
+                    Nivel escolar ofrecido
+                </label>
+                <select class="w-full border-gray-300 rounded-lg shadow-sm focus:border-[#483eff] focus:ring-[#483eff] shadow-blue-500/50 shadow-sm" id="director-2-nivel-escolar">
+                    <option value="">Selecciona un nivel</option>
+                    <option value="inicial">Inicial</option>
+                    <option value="primaria">Primaria</option>
+                    <option value="premedia">Premedia</option>
+                    <option value="media">Media</option>
+                </select>
+            </div>
+        </div>
+
+        <div>
+            <a href="" class="mt-6 w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-[#483eff] hover:bg-[#665eff] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                Enviar
+            </a>
+        </div>
+    </div>
+{% endblock %}
